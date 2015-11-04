@@ -49,7 +49,7 @@ $(function() {
     });
     
     // select country
-    select.val(cookie('sup-country') || countries[0]);
+    select.val(cookie('sup-country') || countries[0]).change();
 
     // power search button
     $('<span class="oBtn oBtnPrimary" style="display:block; margin-bottom:10px;">Search Power-Up</span>')
