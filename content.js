@@ -16,7 +16,7 @@ var style = {
 // cookies
 function cookie(key, value, result) {
     if (value !== undefined) {
-        document.cookie = key + "=" + value;
+        document.cookie = key + "=" + value + "; path=/";
     } else {
         return (result = new RegExp('(?:^|; )' + encodeURIComponent(key) + '=([^;]*)').exec(document.cookie)) ? (result[1]) : null;
     }
