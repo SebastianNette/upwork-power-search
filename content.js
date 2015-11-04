@@ -10,7 +10,7 @@ var countries = [ "All Countries", "Albania", "Algeria", "American Samoa", "Ando
  * @param value {Optional} setter
  * @return cookie value
  */
-function cookie(key, value, result) {
+function cookie(key, value) {
     if (value !== undefined) {
         document.cookie = key + "=" + value + "; path=/";
         return value;
