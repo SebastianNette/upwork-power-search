@@ -245,6 +245,15 @@ var style = {
     marginBottom: 10
 };
 
+// cookies
+function cookie(key, value, result) {
+    if (value !== undefined) {
+        document.cookie = key + "=" + value;
+    } else {
+        return (result = new RegExp('(?:^|; )' + encodeURIComponent(key) + '=([^;]*)').exec(document.cookie)) ? (result[1]) : null;
+    }
+}
+
 $(function() {
 
     var buttonLocation = 'aside.oSide';
@@ -270,6 +279,9 @@ $(function() {
     countries.forEach(function(country) {
         $('<option>').val(country).text(country).appendTo(select);
     });
+    
+    // select country
+    select.val(cookie('sup-country') || countries[0]);
 
     // power search button
     $('<span class="oBtn oBtnPrimary" style="display:block; margin-bottom:10px;">Search Power-Up</span>')
@@ -281,6 +293,9 @@ $(function() {
 
         var value = $(this).val();
         var showAll = value === countries[0];
+
+        // set country
+        cookie('sup-country', value);
 
         $('.hidden-job-placeholder').remove();
 
