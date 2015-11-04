@@ -158,7 +158,7 @@ function StartScrappingProcess() {
 
             var info = $('<span class="power-up">').css("float", "right").prependTo(element.find(selectors.supportInfo).first());
 
-            var applicants = $('<b>').text('Candidates: ' + appCount).css('margin-right', 5).appendTo(info);
+            var applicants = $('<b>').text('Proposals: ' + appCount).css('margin-right', 5).appendTo(info);
             var interviews = $('<b>').text('Interviews: ' + interviewCount).appendTo(info);
 
             // colorize
