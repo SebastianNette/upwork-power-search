@@ -1,0 +1,137 @@
+.supClientInfo {
+	float: right;
+    width: 200px;
+    background: #fff;
+    border: 1px #ccc solid;
+    padding: 4px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-family: Helvetica, Arial, sans-serif;
+
+}
+
+.supSearch {
+
+	-webkit-writing-mode: horizontal-tb;
+
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: start;
+
+    -webkit-rtl-ordering: logical;
+    -webkit-user-select: text;
+
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: buttontext;
+    padding: 2px 6px 3px;
+    border: 2px outset buttonface;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    background-color: buttonface;
+    box-sizing: border-box;
+
+    padding: 1px 6px;
+
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+
+    word-wrap: normal;
+
+    cursor: pointer;
+    border: 0;
+    font: 14px 'Gotham Medium';
+    line-height: 24px;
+    border-radius: 2px;
+    outline: 0;
+    background-clip: padding-box;
+    padding: 5px 14px;
+    white-space: nowrap;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: always;
+
+	color: #fff;
+    background: #37a000;
+    height: 35px;
+    vertical-align: middle;
+
+	-webkit-appearance: button;
+    cursor: pointer;
+
+    width: 100%;
+	display:block;
+	margin:0 0 10px 0;
+}
+
+.supCountries {
+	-webkit-writing-mode: horizontal-tb;
+
+    font: 13.3333px Arial;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+
+    cursor: default;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    align-items: center;
+
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    word-wrap: normal;
+
+    height: auto !important;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: #494949;
+    border: 2px solid #e0e0e0;
+    border-radius: 3px;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIGZpbGw9IiM3YmQ0NTQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNDhweCIgaGVpZ2h0PSI0OHB4IiB2aWV3Qm94PSIwIDAgNDggNDgiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQ4IDQ4IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwb2x5Z29uIGlkPSJhcnJvdy0yNS1pY29uIiBwb2ludHM9IjQxLjYwNSw5IDQ4LDE1LjM1OSAyNCwzOSAwLDE1LjM1OSA2LjM5NSw5IDI0LDI2LjM0MiAiLz4NCjwvc3ZnPg0K);
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: -webkit-calc(100% - 5px) center;
+    background-position: right 5px center;
+    background-color: #fff;
+    padding: 5px 25px 5px 5px!important;
+    font-size: 14px;
+    font-family: "Gotham Book";
+
+	width:100%;
+	margin:0 0 10px 0;
+}
+
+.supCountries:not(:-internal-list-box) {
+    overflow: visible !important;
+}
+
+.supJobSearch .supSearch {
+    font-weight: 600;
+    font-family: 'Gotham Book', Helvetica, Arial, sans-serif;
+}
+
+.supJobSearch .supCountries {
+	margin-bottom:15px;
+}
