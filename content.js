@@ -23,6 +23,10 @@ function cookie(key, value, result) {
 /* css selectors */
 var selectors = {};
 
+/* globals */
+var countrySelect,
+    searchButton;
+
 /* on document ready */
 $(function() {
 
@@ -57,20 +61,20 @@ $(function() {
     $buttonLocation.find('h1').first().remove();
 
     // countries
-    var select = $('<select class="supCountries">');
-        select.on("keyup change", hideJobsByCountry);
-        select.prependTo($buttonLocation);
+    countrySelect = $('<select class="supCountries">')
+        .on("keyup change", hideJobsByCountry)
+        .prependTo($buttonLocation);
 
     // add options
     countries.forEach(function(country) {
-        $('<option>').val(country).text(country).appendTo(select);
+        $('<option>').val(country).text(country).appendTo(countrySelect);
     });
     
     // select country
-    select.val(cookie('sup-country') || countries[0]).change();
+    countrySelect.val(cookie('sup-country') || countries[0]).change();
 
     // power search button
-    $('<input type="button" class="supSearch">')
+    searchButton = $('<input type="button" class="supSearch">')
         .val('Search Power-Up')
         .click(StartScrappingProcess)
         .prependTo($buttonLocation);
@@ -118,6 +122,9 @@ function hideJobsByCountry() {
  * data scrapping
  */
 function StartScrappingProcess() {
+
+    // hide jobs by country
+    countrySelect.change();
 
     // remove previous content
     $('.power-up').remove();
