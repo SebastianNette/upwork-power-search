@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "Upwork Search Power-Up",
+    "description": "",
+    "version": "1.2",
+    "icons": {
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.upwork.com/o/jobs/browse/*",
+                "https://www.upwork.com/find-work-home/*"
+            ],
+            "js": [
+                "jquery-latest.min.js",
+                "content.js"
+            ],
+            "css": [
+                "search.css"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}
