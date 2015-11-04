@@ -25,14 +25,15 @@ var selectors = {};
 
 /* globals */
 var countrySelect,
-    searchButton;
+    searchButton,
+    buttonLocation;
 
 /* on document ready */
 $(function() {
 
     // job feed
     if (window.location.href.indexOf("find-work-home") !== -1) {
-        $buttonLocation = $('.oLayout aside').first();
+        buttonLocation = $('.oLayout aside').first();
 
         // selectors
         selectors.jobTile = 'article.oJobTile';
@@ -45,7 +46,7 @@ $(function() {
 
     // search
     else {
-        $buttonLocation = $('#search-jobs-filters').parent();
+        buttonLocation = $('#search-jobs-filters').parent();
         $('body').addClass('supJobSearch');
 
         // selectors
@@ -58,12 +59,12 @@ $(function() {
     }
 
     // remove placeholder text
-    $buttonLocation.find('h1').first().remove();
+    buttonLocation.find('h1').first().remove();
 
     // countries
     countrySelect = $('<select class="supCountries">')
         .on("keyup change", hideJobsByCountry)
-        .prependTo($buttonLocation);
+        .prependTo(buttonLocation);
 
     // add options
     countries.forEach(function(country) {
@@ -77,7 +78,7 @@ $(function() {
     searchButton = $('<input type="button" class="supSearch">')
         .val('Search Power-Up')
         .click(StartScrappingProcess)
-        .prependTo($buttonLocation);
+        .prependTo(buttonLocation);
 });
 
 /**
